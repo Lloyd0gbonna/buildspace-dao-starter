@@ -1,10 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-import App from "./App.jsx";
+import App from "./App";
 
 //Import ThirdWeb
-import { ThirdWebProvider } from '@3rdweb/hooks';
+import { ThirdwebWeb3Provider } from '@3rdweb/hooks';
 //Include supported chain
 // 4 = Rinkeby
 const supportedChainIds = [4];
@@ -18,12 +18,12 @@ const connectors = {
 // Wrap App with ThirdWebProvider.
 ReactDOM.render(
   <React.StrictMode>
-    <ThirdWebProvider
+    <ThirdwebWeb3Provider
       connectors={connectors}
       supportedChainIds={supportedChainIds} 
     >
         <App />
-      </ThirdWebProvider>
+      </ThirdwebWeb3Provider>
   </React.StrictMode>,
   document.getElementById("root")
 );

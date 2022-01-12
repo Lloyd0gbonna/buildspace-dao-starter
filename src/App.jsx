@@ -8,7 +8,7 @@ const App = () => {
   const { connectWallet, address, error, provider } = useWeb3();
   console.log("✋🏾 Address:", address)
 
-  //This is the case wherein a user has't connected their wallet
+  //This is the case wherein a user hasn't connected their wallet
   //to your web app
   if(!address) {
     return (
